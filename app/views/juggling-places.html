@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/juggling-object">Back</a>
+
+      <form class="form" action="/check-your-answers" method="post">
+
+        <div class="form-group">
+  <fieldset>
+
+          <legend>
+            <h1 class="heading-large">
+              Where do you like to juggle?
+            </h1>
+            <span class="body-text">Select all options that are relevant to you.</span>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="places-home" name="juggling-places" type="checkbox" value="At home">
+            <label for="places-home">At home</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="places-park" name="juggling-places" type="checkbox" value="At the park">
+            <label for="places-park">At the park</label>
+          </div>
+          <div class="multiple-choice" data-target="example-which-beach">
+            <input id="places-beach" name="nationalities" type="checkbox" value="At the beach">
+            <label for="places-beach">At the beach</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="example-which-beach">
+            <label class="form-label" for="places-other-beach">Beach name</label>
+            <input class="form-control" type="text" id="places-other-beach" name="places-other-beach">
+          </div>
+
+        </fieldset>
+      </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
